@@ -16,7 +16,7 @@ import { getContacts } from 'redux/selectors';
 const userSchema = object().shape({
   name: string()
     .min(3)
-    .max(24)
+    .max(25)
     .trim()
     .matches(
       /^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$/,
