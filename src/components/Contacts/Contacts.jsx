@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { getContacts, getFilter } from 'redux/selectors';
-import { removeContact } from 'redux/actions';
+import { removeContact } from 'redux/contactsSlice';
 import { Contacts, ContactItem, FormButton } from './Contacts.styled';
 
 const getVisibleContacts = (contacts, filter) => {

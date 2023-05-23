@@ -10,7 +10,7 @@ import {
   ErrorMessage,
   FormButton,
 } from './Phonebook.styled';
-import { addContact } from 'redux/actions';
+import { addContact } from 'redux/contactsSlice';
 import { getContacts } from 'redux/selectors';
 
 const userSchema = object().shape({
