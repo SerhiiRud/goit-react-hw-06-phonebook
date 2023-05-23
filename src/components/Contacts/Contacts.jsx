@@ -4,12 +4,6 @@ import { getContacts, getFilter } from 'redux/selectors';
 import { removeContact } from 'redux/contactsSlice';
 import { Contacts, ContactItem, FormButton } from './Contacts.styled';
 
-const getVisibleContacts = (contacts, filter) => {
-  return [...contacts].filter(contact =>
-    contact.name.toLowerCase().includes(filter.toLowerCase())
-  );
-};
-
 export const ContactList = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(getContacts);
@@ -17,6 +11,12 @@ export const ContactList = () => {
 
   const onDelete = id => {
     dispatch(removeContact(id));
+  };
+
+  const getVisibleContacts = (contacts, filter) => {
+    return [...contacts].filter(contact =>
+      contact.name.toLowerCase().includes(filter.toLowerCase())
+    );
   };
 
   const visibleContacts = getVisibleContacts(contacts, filter);
